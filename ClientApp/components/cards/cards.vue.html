@@ -1,0 +1,27 @@
+﻿<template>
+    <div>
+        <h1>Cards</h1>
+
+        <table v-if="cards.length" class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Team</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in cards">
+                    <td>{{ item.adrenalynId }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.team.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p v-else><em>Loading...</em></p>
+    </div>
+</template>
+
+<script src="./cards.ts"></script>
+

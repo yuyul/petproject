@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <h1>Teams</h1>
+
+        <table v-if="teams.length" class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="item in teams">
+                    <router-link :to="'/cards/' +item.id" active-class="activo" tag="td">
+                        <a>{{ item.name }}</a>
+                    </router-link>
+                </tr>
+            </tbody>
+        </table>
+
+        <p v-else><em>Loading...</em></p>
+    </div>
+</template>
+
+<script src="./teams.ts"></script>
+
