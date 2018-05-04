@@ -11,9 +11,10 @@ using System;
 namespace petproject.Migrations
 {
     [DbContext(typeof(CardsContext))]
-    partial class CardsContextModelSnapshot : ModelSnapshot
+    [Migration("20180504100740_CardPosition")]
+    partial class CardPosition
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
